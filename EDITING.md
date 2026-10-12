@@ -7,7 +7,9 @@ upstream projects.
 
 Edit `DISPLAY_NAME`, `USERNAME`, or the colors near the top of
 `scripts/generate_graphics.py` to change the identity graphic and visual theme.
-The YX monogram is an original character-grid design; no portrait is required.
+The ASCII portrait is drawn from `assets/portrait.txt`, converted from your photo.
+The original photo is not stored in this repository. The daily refresh preserves
+the character grid and redraws the SVG from it.
 The graphics adapt to light and dark color schemes and use a system monospace font.
 
 The daily workflow updates only `assets/`; it never overwrites your README copy.
@@ -31,3 +33,8 @@ python3 scripts/generate_graphics.py
 
 Alternatively, provide `GITHUB_TOKEN` and `GH_LOGIN` through your environment.
 The script uses Python's standard library and needs no additional packages.
+
+To replace the portrait, install Pillow in your local Python environment and run
+`python3 scripts/make_portrait.py /path/to/photo.jpg --crop LEFT TOP RIGHT BOTTOM`,
+then regenerate the graphics. Only the optional photo conversion requires Pillow;
+the daily workflow does not.

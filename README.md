@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/identity.svg" width="620" alt="Nathan Lim / yx-lim, ASCII-style monogram" />
+<img src="./assets/identity.svg" width="620" alt="ASCII portrait of Nathan Lim / yx-lim" />
 
 [github](https://github.com/yx-lim) &nbsp;&middot;&nbsp; [repositories](https://github.com/yx-lim?tab=repositories)
 

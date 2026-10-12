@@ -60,14 +60,16 @@ text {{ font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", 
 
 
 def identity():
-    glyphs = ["@@    @@  @@    @@", " @@  @@    @@  @@ ", "  @@@@      @@@@  ",
-              "   @@        @@   ", "   @@       @@@@  ", "   @@      @@  @@ ",
-              "   @@     @@    @@"]
-    art = "".join(text(219, 30 + i * 17, line, 16, "accent", 'xml:space="preserve"')
+    glyphs = (ASSETS / "portrait.txt").read_text().splitlines()
+    width = max(map(len, glyphs)) * 3.9
+    left = (620 - width) / 2
+    art = "".join(text(left, 14 + i * 6.7, line, 6.5, "ink",
+                       f'xml:space="preserve" textLength="{width}" lengthAdjust="spacingAndGlyphs"')
                   for i, line in enumerate(glyphs))
-    art += text(310, 170, DISPLAY_NAME, 25, "ink", 'text-anchor="middle"')
-    art += text(310, 195, "@" + USERNAME, 12, "muted", 'text-anchor="middle"')
-    return svg(220, art, DISPLAY_NAME + " / " + USERNAME)
+    baseline = 14 + len(glyphs) * 6.7 + 32
+    art += text(310, baseline, DISPLAY_NAME, 25, "ink", 'text-anchor="middle"')
+    art += text(310, baseline + 25, "@" + USERNAME, 12, "accent", 'text-anchor="middle"')
+    return svg(round(baseline + 48), art, DISPLAY_NAME + " / ASCII portrait")
 
 
 def heading(index, label):
