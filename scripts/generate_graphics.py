@@ -145,7 +145,7 @@ def generate():
     for i, (value, label) in enumerate(metrics):
         x = 15 + i * 207
         art += text(x, 41, value, 28, "ink") + text(x, 65, label, 11)
-    graphics = {"identity.svg": identity(), "stats.svg": svg(86, art, "Public repository statistics")}
+    graphics = {"portrait.svg": identity(), "stats.svg": svg(86, art, "Public repository statistics")}
 
     palette = ["#008a80", "#c77dba", "#d39b35", "#588bc4", "#859747"]
     ranked = sorted(language_bytes.items(), key=lambda pair: (-pair[1], pair[0]))
