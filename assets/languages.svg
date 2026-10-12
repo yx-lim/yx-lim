@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="172" viewBox="0 0 620 172" role="img" aria-label="Languages by code bytes">
+<title>Languages by code bytes</title>
+<style>
+text { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+.ink { fill: #24292f; } .muted { fill: #57606a; }
+.accent { fill: #007d75; } .rule { stroke: #d0d7de; }
+.empty { fill: #ebedf0; }
+@media (prefers-color-scheme: dark) {
+ .ink { fill: #f0f6fc; } .muted { fill: #a4adb7; }
+ .accent { fill: #59d8c2; } .rule { stroke: #30363d; }
+ .empty { fill: #21262d; }
+}
+</style>
+<text x="0" y="18" font-size="11" class="muted" >LANGUAGES / PUBLIC ORIGINAL REPOS</text><rect x="0.000" y="32" width="384.588" height="6" fill="#008a80" /><rect x="0" y="54" width="6" height="6" fill="#008a80" /><text x="16" y="62" font-size="12" class="ink" >Jupyter Notebook</text><text x="620" y="62" font-size="12" class="muted" text-anchor="end">62.0%</text><rect x="384.588" y="32" width="229.297" height="6" fill="#c77dba" /><rect x="0" y="76" width="6" height="6" fill="#c77dba" /><text x="16" y="84" font-size="12" class="ink" >Python</text><text x="620" y="84" font-size="12" class="muted" text-anchor="end">37.0%</text><rect x="613.885" y="32" width="1.719" height="6" fill="#d39b35" /><rect x="0" y="98" width="6" height="6" fill="#d39b35" /><text x="16" y="106" font-size="12" class="ink" >JavaScript</text><text x="620" y="106" font-size="12" class="muted" text-anchor="end">0.3%</text><rect x="615.604" y="32" width="1.481" height="6" fill="#588bc4" /><rect x="0" y="120" width="6" height="6" fill="#588bc4" /><text x="16" y="128" font-size="12" class="ink" >C++</text><text x="620" y="128" font-size="12" class="muted" text-anchor="end">0.2%</text><rect x="617.085" y="32" width="2.915" height="6" fill="#859747" /><rect x="0" y="142" width="6" height="6" fill="#859747" /><text x="16" y="150" font-size="12" class="ink" >Other</text><text x="620" y="150" font-size="12" class="muted" text-anchor="end">0.5%</text>
+</svg>
