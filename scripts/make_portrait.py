@@ -12,9 +12,12 @@ def main():
     parser.add_argument("--crop", nargs=4, type=int, default=None,
                         metavar=("LEFT", "TOP", "RIGHT", "BOTTOM"))
     args = parser.parse_args()
-    image = ImageOps.exif_transpose(Image.open(args.photo))
+    image = ImageOps.exif_transpose(Image.open(args.photo)).convert("RGBA")
     if args.crop:
         image = image.crop(tuple(args.crop))
+    # Transparent cutouts must map to blank characters, not dark RGB remnants.
+    white = Image.new("RGBA", image.size, (255, 255, 255, 255))
+    image = Image.alpha_composite(white, image).convert("RGB")
     columns = 96
     rows = round(columns * 3.9 / 6.7 * image.height / image.width)
     gray = ImageOps.autocontrast(ImageOps.grayscale(image), cutoff=1)

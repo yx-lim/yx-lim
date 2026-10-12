@@ -8,6 +8,8 @@ upstream projects.
 Edit `DISPLAY_NAME`, `USERNAME`, or the colors near the top of
 `scripts/generate_graphics.py` to change the identity graphic and visual theme.
 The ASCII portrait is drawn from `assets/portrait.txt`, converted from your photo.
+The mountain and sky background was removed before conversion. Transparent input
+pixels are composited onto white so they become blank characters in the SVG.
 The original photo is not stored in this repository. The daily refresh preserves
 the character grid and redraws the SVG from it.
 Each row wipes from left to right with a moving cursor, staggered by 0.09 seconds.
