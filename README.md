@@ -2,7 +2,10 @@
 
 <img src="./assets/portrait-clean.svg" width="620" alt="ASCII portrait of Nathan Lim / yx-lim" />
 
-[github](https://github.com/yx-lim) &nbsp;&middot;&nbsp; [repositories](https://github.com/yx-lim?tab=repositories)
+[repo](https://github.com/yx-lim?tab=repositories) &nbsp;&middot;&nbsp; 
+[instagram](https://www.instagram.com/yitxueng/) &nbsp;&middot;&nbsp; 
+[linkedin](https://www.linkedin.com/in/limyitxueng/) &nbsp;&middot;&nbsp; 
+[email](yitxuenglim@gmail.com)
 
 <!-- Add your portfolio, LinkedIn, or a public contact link here. -->
 
@@ -10,19 +13,18 @@
 
 <img src="./assets/heading-about.svg" width="620" alt="About" />
 
-> Nathan Lim / yx-lim
-> 
-> [Your role, interests, and a short line about how you like to build.]
+> EECS student at University of Edinburgh <br>
+> ready to take on the world!
 
-[Write two or three sentences about yourself here. Mention what you are working on,
-what you care about, and what you would like to explore next.]
+
+I build in the software-hardware space and <br> right now that's robotics research and FPGA. <br>
 
 <img src="./assets/heading-stack.svg" width="620" alt="Stack" />
 
 <!-- Replace this line with the languages and tools you use. -->
-<samp>[language] &nbsp; [framework] &nbsp; [simulation tool] &nbsp; [database] &nbsp; [daily tools]</samp>
+<samp>python &nbsp; C++ &nbsp; java &nbsp; javascript &nbsp; react &nbsp; fastapi &nbsp; postgres &nbsp; firebase &nbsp; docker &nbsp; git &nbsp; linux</samp>
 
-<img src="./assets/heading-projects.svg" width="620" alt="Selected projects" />
+<img src="./assets/heading-projects.svg" width="620" alt="Projects" />
 
 <!-- These descriptions come from your public repositories. Edit, reorder, or replace them. -->
 **[ghostgui](https://github.com/yx-lim/ghostgui)** &nbsp;&middot;&nbsp; <samp>python</samp><br>
