@@ -11,5 +11,5 @@ text { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", m
  .empty { fill: #21262d; }
 }
 </style>
-<text x="15" y="41" font-size="28" class="ink" >13</text><text x="15" y="65" font-size="11" class="muted" >public repos</text><text x="222" y="41" font-size="28" class="ink" >9</text><text x="222" y="65" font-size="11" class="muted" >original repos</text><text x="429" y="41" font-size="28" class="ink" >3</text><text x="429" y="65" font-size="11" class="muted" >stars / originals</text>
+<text x="15" y="41" font-size="28" class="ink" >14</text><text x="15" y="65" font-size="11" class="muted" >public repos</text><text x="222" y="41" font-size="28" class="ink" >9</text><text x="222" y="65" font-size="11" class="muted" >original repos</text><text x="429" y="41" font-size="28" class="ink" >3</text><text x="429" y="65" font-size="11" class="muted" >stars / originals</text>
 </svg>
