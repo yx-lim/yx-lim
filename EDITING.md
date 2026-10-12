@@ -10,6 +10,9 @@ Edit `DISPLAY_NAME`, `USERNAME`, or the colors near the top of
 The ASCII portrait is drawn from `assets/portrait.txt`, converted from your photo.
 The original photo is not stored in this repository. The daily refresh preserves
 the character grid and redraws the SVG from it.
+Each row wipes from left to right with a moving cursor, staggered by 0.09 seconds.
+The SVG animation prints once and freezes; reduced-motion viewers get a still
+portrait. Static SVG renderers also show the finished portrait.
 The graphics adapt to light and dark color schemes and use a system monospace font.
 
 The daily workflow updates only `assets/`; it never overwrites your README copy.

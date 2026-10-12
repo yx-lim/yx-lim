@@ -63,9 +63,37 @@ def identity():
     glyphs = (ASSETS / "portrait.txt").read_text().splitlines()
     width = max(map(len, glyphs)) * 3.9
     left = (620 - width) / 2
-    art = "".join(text(left, 14 + i * 6.7, line, 6.5, "ink",
-                       f'xml:space="preserve" textLength="{width}" lengthAdjust="spacingAndGlyphs"')
-                  for i, line in enumerate(glyphs))
+    animated = []
+    still = []
+    delay = 0.09
+    for i, line in enumerate(glyphs):
+        y = 14 + i * 6.7
+        begin, end = i * delay, (i + 1) * delay
+        row = text(left, y, line, 6.5, "ink",
+                   f'xml:space="preserve" textLength="{width}" lengthAdjust="spacingAndGlyphs"')
+        still.append(row)
+        # A full-width base keeps the portrait visible in static SVG renderers.
+        # All wipes begin at zero, waiting at width zero until their row starts.
+        timing = (f'values="0;0;{width}" keyTimes="0;{i / (i + 1):.8f};1"'
+                  if i else f'from="0" to="{width}"')
+        animated.append(
+            f'<clipPath id="portrait-row-{i}" clipPathUnits="userSpaceOnUse">'
+            f'<rect x="{left}" y="{y - 5.7}" width="{width}" height="6.7">'
+            f'<animate attributeName="width" {timing} begin="0s" '
+            f'dur="{end:.2f}s" fill="freeze" /></rect></clipPath>'
+            f'<g clip-path="url(#portrait-row-{i})">{row}</g>'
+            f'<rect x="{left}" y="{y - 5.7}" width="3" height="6.7" '
+            f'class="accent" opacity="0">'
+            f'<animate attributeName="x" from="{left}" to="{left + width}" '
+            f'begin="{begin:.2f}s" dur="{delay}s" fill="freeze" />'
+            f'<set attributeName="opacity" to="0.8" begin="{begin:.2f}s" '
+            f'dur="{delay}s" /></rect>'
+        )
+    art = ('<style>.portrait-still{display:none}'
+           '@media(prefers-reduced-motion:reduce){'
+           '.portrait-motion{display:none}.portrait-still{display:inline}}</style>'
+           '<g class="portrait-motion">' + "".join(animated) + '</g>'
+           '<g class="portrait-still">' + "".join(still) + '</g>')
     baseline = 14 + len(glyphs) * 6.7 + 32
     art += text(310, baseline, DISPLAY_NAME, 25, "ink", 'text-anchor="middle"')
     art += text(310, baseline + 25, "@" + USERNAME, 12, "accent", 'text-anchor="middle"')
